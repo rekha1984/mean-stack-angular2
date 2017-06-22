@@ -1,0 +1,39 @@
+<div class="container">
+
+<br>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+      <th>Id</th>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Phone.No</th>
+        <th>city</th>
+        <th>State</th>
+        <th>Country</th>
+        <th colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let post of posts">
+        <td>{{post.id}}</td>
+        <td>{{post.name}}</td>
+        <td>{{post.lastname}}</td>
+        <td>{{post.email}}</td>
+        <td>{{post.phone}}</td>
+        <td>{{post.city}}</td>
+        <td>{{post.state}}</td>
+        <td>{{post.country}}</td>
+        <td><button class="btn btn sucess" type="button" (click)="update(post)"></button> Edit</td>
+        <td><button class="btn btn sucess" type="button" (click)="del(post)"></button>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+

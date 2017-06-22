@@ -1,0 +1,35 @@
+<div class="container">
+<h1>Edit user</h1>
+	<form action="" method="" ngForm="user">
+<div class="form-group">
+	<label>Name</label>
+	<input class="form-control" type="text" name="name" [(ngModel)]="model.name">
+</div>
+<div class="form-group">
+	<label>Last Name</label>
+	<input class="form-control" type="text" name="lastname" [(ngModel)]="model.lastname">
+</div>
+<div class="form-group">
+	<label>Email</label>
+	<input class="form-control" type="text" name="email" [(ngModel)]="model.email">
+</div>
+<div class="form-group">
+	<label>Phone Number</label>
+	<input class="form-control" type="text" name="phone" [(ngModel)]="model.phone">
+</div>
+<div class="form-group">
+	<label>city</label>
+	<input class="form-control" type="text" name="city" [(ngModel)]="model.city">
+</div>
+<div class="form-group">
+	<label>State</label>
+	<input class="form-control" type="text" name="state" [(ngModel)]="model.state">
+</div>
+<div class="form-group">
+	<label>Country</label>
+	<input class="form-control" type="text" name="country" [(ngModel)]="model.country">
+</div>
+<button type="submit" class="btn btn-primary" (click)="update()">Edit</button>
+</form>
+
+</div>

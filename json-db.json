@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "ravindra ",
+      "lastname": "singh",
+      "email": "ravindrasingh35@gmail.com",
+      "phone": "87963236",
+      "city": "jaipur",
+      "state": "Rajasthan",
+      "country": "India",
+      "id": "Sk6bBSZXW"
+    },
+    {
+      "name": "shreayash ",
+      "lastname": "singh",
+      "email": "dhruv singh@gmail",
+      "phone": "89566222",
+      "city": "jaipur",
+      "state": "rajasthan",
+      "country": "inda",
+      "id": "HJMH3TXmZ"
+    }
+  ]
+}

@@ -1,33 +1,33 @@
 import { Component } from '@angular/core';
 import {  } from '@angular/form';
-import {Postservice } from'../services/postservice';
 import { Http } from '@angular/http';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './edit-user.html',
-
-  providers:[Postservice]
  
 })
 
 
 export class EdituserComponent {  
   model: any = {};
-  posts:Post[];
-  constructor(public http: Http, private postService:Postservice) {
- this.postService.getPost().subscribe(posts=>{
-    this.posts=posts;
-   
-  });  
+  id : string;
+  constructor(public http: Http, private route: ActivatedRoute ) {
+    debugger
+    this.id = route.snapshot.params['id'];
+    this.http.get(`http://localhost:3000/users/${this.id}`)
+      .subscribe(res => {
+        this.model = res.json();
+      });
   }
 
-
+    
 
   update(user) {
     this.model=user;
-    this.http.put(`http://localhost:3000/users/${user.id}`, this.model=user).subscribe(response => {
+    this.http.put(`http://localhost:3000/users/${user.id}`, this.model).subscribe(response => {
       alert('sucessfully save');
       
     })

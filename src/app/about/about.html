@@ -1,3 +1,38 @@
+
+
+  <div class="container">
+    <h1>User List</h1>
+    <div class="row">
+      <div class="col-md-4 pull-right">
+    <div class="form-group">
+    <label>Search</label>
+    <div><input type="text" class="form-control"> </div>
+    </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+    <div class="col-md-4" *ngFor=" let post of posts">
+      <!-- Left-aligned -->
+      <div class="media">
+        <div class="media-left">
+         <img src="{{post.image}}" class="media-object">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{post.name}}</h4>
+        <p>{{post.email}}</p>
+        <p>{{post.streetAddress}},{{post.secondaryAddress}}<br>
+        <strong>Zipcode:</strong>{{post.zipCode}}<br>
+        {{post.city}},{{post.state}}<br>
+        {{post.country}}
+        </p>
+        
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
 <div class="container">
 
 <br>
@@ -30,6 +65,21 @@
       </tr>
     </tbody>
   </table>
+
+
+
+
+  id:'number';
+  name:'string';
+  country:'string';
+  streetAddress:'string';
+  secondaryAddress:'string';
+  state:'string';
+  city:'string';
+  zipCode:'number'
+  email:'string';
+  DOB: 'number';
+  image:'string';
 
 
 

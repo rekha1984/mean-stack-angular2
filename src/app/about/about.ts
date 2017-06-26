@@ -42,10 +42,13 @@ update(dhruv){
 interface Post{
   id:'number';
   name:'string';
-  lastname:'string'
-  phone:'number'
-  email:'string';
-  city:'string';
-  state:'string';
   country:'string';
+  streetAddress:'string';
+  secondaryAddress:'string';
+  state:'string';
+  city:'string';
+  zipCode:'number'
+  email:'string';
+  DOB: 'number';
+  image:'string';
 }

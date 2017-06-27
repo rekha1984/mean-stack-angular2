@@ -8,8 +8,8 @@
     <label>Search</label>
     <p><input type="text" [(ngModel)]="searchquery" (ngModelChange)="valueChange($event)" class="form-control"> </p>
     <p class="search_letters">
-	
-	<a style="margin:3px;"   *ngFor="let letter of alphabets; trackBy: index;" (click)="sortBy(letter)" >{{letter}}</a>
+		<a style="margin:3px;" (click)="sortBy('')" >All</a>
+	<a style="margin:3px;"  *ngFor="let letter of alphabets; trackBy: index;" (click)="sortBy(letter)" >{{letter}}</a>
 	
 	
 	</p>

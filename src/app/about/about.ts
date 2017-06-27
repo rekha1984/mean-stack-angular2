@@ -12,15 +12,22 @@ export class AboutComponent {
   posts:Post[];
   model: any = {};
 constructor(private postService:Postservice, private router: Router, public http: Http,){
-  
-  this.postService.getPost().subscribe(posts=>{
+  var q='';
+  this.postService.getPost(q).subscribe(posts=>{
   	this.posts=posts;
   });	
  
 
 }
 
-del(user) {
+valueChange(value) {
+   
+    this.postService.getPost(value).subscribe(posts=>{
+		this.posts=posts;
+	  });	
+  }
+  
+  del(user) {
     this.model=user;
     this.http.delete(`http://localhost:3000/users/${user.id}`, this.model=user).subscribe(response => {
       alert('sucessfully delete');

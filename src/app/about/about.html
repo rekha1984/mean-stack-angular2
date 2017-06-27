@@ -6,7 +6,7 @@
       <div class="col-md-4 pull-right">
     <div class="form-group">
     <label>Search</label>
-    <div><input type="text" class="form-control"> </div>
+    <div><input type="text" [(ngModel)]="searchquery" (ngModelChange)="valueChange($event)" class="form-control"> </div>
     </div>
       </div>
     </div>
@@ -33,6 +33,7 @@
     </div>
   </div>
 
+  <!--
 <div class="container">
 
 <br>
@@ -84,6 +85,6 @@
 
 
 
-</div>
+</div>-->
 
 

@@ -9,9 +9,11 @@ export class Postservice {
 		console.log('post service runing...')
 	}
 
-	getPost(){
-		return this.http.get('http://localhost:3000/users')
-		.map(res=>res.json());
+	getPost(q){
+ 
+			return this.http.get('http://localhost:3000/users?q='+q)
+			.map(res=>res.json());
+		 
 	}
 }
 

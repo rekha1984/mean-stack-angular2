@@ -6,7 +6,13 @@
       <div class="col-md-4 pull-right">
     <div class="form-group">
     <label>Search</label>
-    <div><input type="text" [(ngModel)]="searchquery" (ngModelChange)="valueChange($event)" class="form-control"> </div>
+    <p><input type="text" [(ngModel)]="searchquery" (ngModelChange)="valueChange($event)" class="form-control"> </p>
+    <p class="search_letters">
+	
+	<a style="margin:3px;"   *ngFor="let letter of alphabets; trackBy: index;" (click)="sortBy(letter)" >{{letter}}</a>
+	
+	
+	</p>
     </div>
       </div>
     </div>

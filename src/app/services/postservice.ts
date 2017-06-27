@@ -9,9 +9,9 @@ export class Postservice {
 		console.log('post service runing...')
 	}
 
-	getPost(q){
+	getPost(q,sortby){
  
-			return this.http.get('http://localhost:3000/users?q='+q)
+			return this.http.get('http://localhost:3000/users?q='+q+'&name_like=^'+sortby)
 			.map(res=>res.json());
 		 
 	}

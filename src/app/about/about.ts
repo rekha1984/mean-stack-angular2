@@ -11,18 +11,29 @@ import { Http } from '@angular/http';
 export class AboutComponent {
   posts:Post[];
   model: any = {};
+  private alphabets: string[] = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  private q:string;
+  private sortby:string;
+  
 constructor(private postService:Postservice, private router: Router, public http: Http,){
-  var q='';
-  this.postService.getPost(q).subscribe(posts=>{
+  this.q='';
+  this.sortby='';
+  this.postService.getPost(this.q,this.sortby).subscribe(posts=>{
   	this.posts=posts;
   });	
- 
+  
 
 }
 
 valueChange(value) {
-   
-    this.postService.getPost(value).subscribe(posts=>{
+    this.q=value;
+    this.postService.getPost(this.q,this.sortby).subscribe(posts=>{
+		this.posts=posts;
+	  });	
+  }
+  sortBy(value) {
+    this.sortby=value;
+    this.postService.getPost(this.q,this.sortby).subscribe(posts=>{
 		this.posts=posts;
 	  });	
   }
